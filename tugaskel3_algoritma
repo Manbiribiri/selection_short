@@ -19,7 +19,7 @@ clrscr;
 randomize;
     for i:= 1 to 5 do
   begin
-    data[i]:=random(50);
+    data[i]:=random(100);
   end;
 
 cetak_array();
