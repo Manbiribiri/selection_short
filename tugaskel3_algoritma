@@ -1,4 +1,4 @@
-program selection_sort_ascending;
+program selection_sort_descending;
 uses crt;
 var
   data : array [1..5] of integer;
@@ -33,7 +33,7 @@ begin
     {cari nilai maksimum}
     for j:=i to 5 do
     begin
-        if(data[j] < maks)then
+        if(data[j] > maks)then
         begin
             maks:= data[j];
             maks_pstn:=j;
