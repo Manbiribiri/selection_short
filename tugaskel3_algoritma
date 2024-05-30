@@ -1,13 +1,13 @@
 program selection_sort_descending;
 uses crt;
 var
-  data : array [1..5] of integer;
+  data : array [1..6] of integer;
   i,j,maks,maks_pstn,temp : integer;
   procedure cetak_array();
 var
   indeks : integer;
 begin
-  for indeks:= 1 to 5 do
+  for indeks := 1 to 6 do
     begin
       write(data[indeks], ' ');
     end;
@@ -17,36 +17,39 @@ end;
 begin
 clrscr;
 randomize;
-    for i:= 1 to 5 do
+    for i := 1 to 6 do
   begin
-    data[i]:=random(100);
+    data[i] := random(100);
   end;
 
 cetak_array();
 
 {selection sort}
-for i:=1 to 4 do
+for i := 1 to 5 do
 begin
-    maks_pstn:=i;
-    maks:=data[i];
+    maks_pstn := i;
+    maks := data[i];
     
     {cari nilai maksimum}
-    for j:=i to 5 do
+    for j := i to 6 do
     begin
         if(data[j] > maks)then
         begin
-            maks:= data[j];
-            maks_pstn:=j;
+            maks := data[j];
+            maks_pstn := j;
         end;
     end;
     
     {tukar}
-    temp:=data[i];
-    data[i]:=maks;
-    data[maks_pstn]:=temp;
+    temp := data[i];
+    data[i] := maks;
+    data[maks_pstn] := temp;
     
     write('Siklus ke-',i, ' : ');
     cetak_array();
 end;
 readln;
 end.
+   
+    
+  
